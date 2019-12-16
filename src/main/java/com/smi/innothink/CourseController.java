@@ -55,7 +55,7 @@ public class CourseController {
 		else
 			return false;
 	}
-	@RequestMapping(value = "/check", method = RequestMethod.POST, produces = "application/json")
+	@RequestMapping(value = "/check", method = RequestMethod.GET, produces = "application/json")
         public boolean getHello(){
 		return true;
 	}
