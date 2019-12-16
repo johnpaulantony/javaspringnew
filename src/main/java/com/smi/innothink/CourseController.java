@@ -55,12 +55,16 @@ public class CourseController {
 		else
 			return false;
 	}
+	@RequestMapping(value = "/check", method = RequestMethod.POST, produces = "application/json")
+        public String getHello(){
+		return "hello";
+	}
 
 	@RequestMapping(value = "/get", method = RequestMethod.GET, produces = "application/json")
 	public Iterable<Course> get() {
 		return courseRepository.findAll();
 
-	}
+	}tatus
 
 	@RequestMapping(value = "/insertsubject", method = RequestMethod.POST, produces = "application/json")
 	public boolean insertSubject(@RequestBody(required = false) Subject subject) {
@@ -79,11 +83,11 @@ public class CourseController {
 		return subjectRepository.findAll();
 	}
 
-	@RequestMapping(value = "/getsubjectoncourse", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/getsubjectoncourtatusse", method = RequestMethod.GET, produces = "application/json")
 	public Iterable<Subject> getSubjectOnCourse(@RequestParam("courseId") String courseId) {
 		return subjectRepository.getSubjects(courseId);
 	}
-
+tatus
 	@RequestMapping(value = "/inserttopic", method = RequestMethod.POST, produces = "application/json")
 	public boolean insertSubject(@RequestBody(required = false) Topic topic) {
 		String topicId = topicRepository.getId("topic_id", "SMI_IT_TOP_", "topic");
