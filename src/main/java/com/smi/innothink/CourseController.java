@@ -64,7 +64,7 @@ public class CourseController {
 	public Iterable<Course> get() {
 		return courseRepository.findAll();
 
-	}tatus
+	}
 
 	@RequestMapping(value = "/insertsubject", method = RequestMethod.POST, produces = "application/json")
 	public boolean insertSubject(@RequestBody(required = false) Subject subject) {
@@ -87,7 +87,7 @@ public class CourseController {
 	public Iterable<Subject> getSubjectOnCourse(@RequestParam("courseId") String courseId) {
 		return subjectRepository.getSubjects(courseId);
 	}
-tatus
+
 	@RequestMapping(value = "/inserttopic", method = RequestMethod.POST, produces = "application/json")
 	public boolean insertSubject(@RequestBody(required = false) Topic topic) {
 		String topicId = topicRepository.getId("topic_id", "SMI_IT_TOP_", "topic");
