@@ -12,7 +12,7 @@
 	<groupId>com.smi.innothink</groupId>
 	<artifactId>smitraining-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>smitraining-1</name>
 	<description>SMI Innothink training project</description>
 
