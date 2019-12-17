@@ -55,6 +55,10 @@ public class CourseController {
 		else
 			return false;
 	}
+	@RequestMapping(value = "/check", method = RequestMethod.GET, produces = "application/json")
+        public boolean getHello(){
+		return true;
+	}
 
 	@RequestMapping(value = "/get", method = RequestMethod.GET, produces = "application/json")
 	public Iterable<Course> get() {
@@ -79,7 +83,7 @@ public class CourseController {
 		return subjectRepository.findAll();
 	}
 
-	@RequestMapping(value = "/getsubjectoncourse", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/getsubjectoncourtatusse", method = RequestMethod.GET, produces = "application/json")
 	public Iterable<Subject> getSubjectOnCourse(@RequestParam("courseId") String courseId) {
 		return subjectRepository.getSubjects(courseId);
 	}
